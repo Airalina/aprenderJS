@@ -1,0 +1,284 @@
+// /***** FUNCIOENS DE CADENAS DE CARACTERES******/ 
+
+// // let banda = 'metallica',
+// // cancion = 'cancion';
+
+// // let nombre;
+// // nombre= banda + ": " + cancion;
+
+// // console.log(banda.length); Length cuenta los caracteres de la cadena
+
+// // nombre = nombre.concat(" ", "y es genial");
+// // // console.log(aprendiendo+ ' ' + texnologia);
+// // // console.log(`${aprendiendo} ${texnologia}`); Otra forma de concatenar "mejor"
+// // nombre= nombre.toUpperCase();  A  mayusculas
+// // nombre= nombre.toLowerCase(); A minusculas 
+// // console.log(nombre);
+// // let nombre;
+// // let actividad = 'Estoy aprendiendo JavaScript con el curso';
+// // // nombre = actividad.split(' ');     Split separa en arreglos
+// // // let interes = 'Leer, caminar, escucha r, musica'
+// // // nombre = interes.split(', ');
+
+// // //nombre = actividad.replace(' JavaScript', 'JS'); Sustituye la primera por la segunda
+
+// // // nombre = actividad.includes('JavaScript');     Includes busca si existe
+// // // console.log(nombre);  Console.log es para ver en la consola de javascript
+// // // let master = 'Master ',
+// // // puppets = ' Of puppets';
+
+// // // console.log(master.repeat(3));  Repite segun lo que le pongas
+// // // console.log(puppets);
+
+// /***** FUNCIONES MATEMATICAS******/ 
+
+// // const numero1 = 30,
+// //       numero2 = "20",
+// //       numero3 = 20.20,
+// //       numero4 = -3,
+// //       numero5 = 20;
+
+
+// //       let resultado;
+// // // resultado = numero1 + numero2;
+// // // resultado = numero1 - numero2;
+// // // resultado = numero1 * numero2;
+// // // resultado = numero1 / numero2;
+
+// // resultado = Math.round(2.4);  Este redodea despues de .5 al siguiente numero pero bajo .5 se queda en el mismo numero
+// // //resultado= Math.floor(2.9);           Redondea de 2.9 a 2 directamente
+// // //resultado= Math.ceil(2.1);          Redondea de 2.1 a 3 directamente
+// // resultado= Math.sqrt(144);               raiz cuadrada
+// // resultado= Math.abs(numero4);           valor absoluto
+// // resultado= Math.pow(8,3);            Potencia 8 elevada a la 3
+// // resultado= Math.min(10,2,4,60,5);  Se trae el valor minimo
+// // resultado= Math.max(810,2,4,60,5);   Se trae el valor maximo
+// // let puntaje = 0;
+
+
+// /***** DE CADENAS DE CARACTERES A NUMEROS******/ 
+
+// // let numero1 = 50,
+// //     numero2 = '10',
+// //     numero3 = "tres",
+// //     numero4 = "20.20"
+
+// // console.log(numero1 + numero2);
+// // console.log(Number(numero2) + numero1);  /**De string a numero */
+// // console.log(parseInt(numero4) + numero1);/**De string a numero entero */
+// // console.log(parseFloat(numero4) + numero1);/**De string a numero decimal*/
+
+// // let dato;
+// // dato = Number("20");
+// // dato =  Number(-20.20);
+// // dato = Number(true);
+// // dato = Number(false);     /**No admiten arreglos ni cadena de letras */
+
+// // let numero1 = "1010201200.20121",
+// //     numero2 = 25015.54486478478;
+
+// // /**Fixed solo aplica a numeros, si es una cadena transformal con number */
+// // console.log(Number(numero1).toFixed(4));  /**Si fixed esta vacio no trae decimales, sino hay que ponerselos */
+// // console.log(numero2.toFixed(4));  
+
+// /***** DE NUMEROS A CADENAS DE CARACTERES******/ 
+
+// let dato = 1985456445455465;
+
+// // dato = String(dato);
+// dato = String(true);
+// dato = String (new Date());     //fecha actual
+// dato = String((1,2,3,4));
+
+// console.log(dato);
+// console.log(dato.length);
+
+// /*****TIPO DE DATOS******/ 
+// const nombre = 'Juan';
+// // console.log(typeof nombre);
+// const edad = 80;
+// //console.log(typeof edad);
+// let aprender = true;
+// // console.log(typeof aprender);
+// let valor;
+// console.log(typeof valor);
+// valor = 'hola';
+// console.log(typeof valor);
+// valor = true;
+// console.log(typeof valor);
+// valor = 20;
+// console.log(typeof valor);
+// valor = "20";
+// console.log(typeof valor);
+
+//null
+// let hijos = null;
+// // console.log(typeof hijos);
+// //undefined
+// let n;
+// console.log(typeof n);
+//ARREGLO
+// let lenguajes = ['HTML5', 'JS', 'PHP'];
+// console.log(typeof lenguajes);
+// //objeto
+// let persona = {
+//     nombre: 'Juan',
+//     ciudad:'Mexico'
+// }
+// console.log(typeof persona);
+
+// //fecha
+// let fecha = new Date();
+// console.log(typeof fecha);
+
+//*** FUNCIONES CON ARREGLOS***/
+// const numeros = [10, 20, 30, 40, 50];
+// console.log(numeros);
+// console.table(numeros); //muestra la tabla
+//  const meses = new Array('enero', 'febrero', 'marzo');
+// // console.log(meses[2]); PARA AGREGAR A TU ARRAY MAS POSICIONES:
+// //meses[3]= 'Abril';  //push agrega al ultimo lugar en el arreglo
+// meses.push('abril');
+// meses.unshift('uno'); //unshift agrega al principio del arreglo
+// meses.pop(); //te elimina el ultimo lugar del arreglo
+// meses.shift(); //elimina el inicio del array
+// meses.splice(0,2); //eliminar un rango del arreglo del 0 al 2
+// meses.reverse(); //voltea el arreglo
+// meses.sort(); //ordena el array alfabeticamente
+// console.log(meses);
+
+
+// const arreglo = ['Hola', 10, true, "si", null, undefined];
+// console.log(arreglo.length); //Cantidad de cosas en ese arreglo
+//console.log(Array.isArray(arreglo)); //funcion que verifica que es un arreglo
+
+//****OBJETOS*****/
+//Object literal
+// const persona = {
+//     nombre: 'Juan',
+//     apellido: 'De la torre',
+//     edad: 80,
+//     trabajo: true,
+//     musica: ['Trance', 'Rock', 'Grunge'],
+//     hogar: {
+//         ciudad: 'Guadalajara',
+//         pais: 'mexico'
+//     }
+// }
+//Utilizando this en object literal:  NOTA: New Date d afecha actual y con .getfullyear te da el año anda mas
+const persona = {
+    nombre: 'Juan',
+    edad: 80,
+    anioNacimiento: function(){
+        return new Date().getFullYear()- edad;
+    }
+}
+console.log(persona.anioNacimiento());
+// //console.log(persona.edad); //para acceder a cada propiedad
+// //console.log(persona.musica[1]); Acceder a array
+// //console.log(persona.hogar.pais); Objeto dentro de un objeto
+// console.log(persona['hogar']['ciudad']);
+
+
+
+//**TEMPLATE STRINGS***/
+
+// const nombre = 'Juan',
+//       trabajo= 'programador';
+// //console.log("Nombre: "+ nombre+ ', Trabajo: '+ trabajo);
+// //concatenar mejor:
+// // console.log(`Nombre: ${nombre}, Trabajo: ${trabajo} `);
+// const contenedorApp = document.querySelector('#mensaje'); //    querySelector permite seleccionar un elemento de mi html
+// let html = '<ul>'+
+//                 '<li> Nombre: ' + nombre + '</li>' +
+//                 '<li> Trabajo: ' + trabajo + '</li>' +     //inyecta en el html
+//                 '</ul>';
+// let html2= `<ul>
+//                 <li>Nombre: ${nombre}</li>
+//                 <li>Trabajo: ${trabajo}</li>
+
+//             </ul>`;   
+// contenedorApp.innerHTML = html2;
+
+/*****FUNCIONES***/
+//fuction declaration
+// saludar('Juan', 'desarrollador web');
+// saludar('Pedro');
+// saludar();
+// function saludar(nombre = 'Visitante', trabajo = 'No sabemos!'){
+//     console.log('Hola '+ nombre + ' Tu trabajo es ' + trabajo);
+// }
+// //saludar();
+// //function expression: no puedes llamarla antes de declararla la otra si
+
+// const suma = function(a = 0 ,b = 0){
+//     console.log(a + b);
+// }
+// suma(10,20);
+// suma(30,20);
+// suma(100,20);
+
+// //IIFE: se invocan a si mismas
+// (function(tecnologia){
+//     console.log('AQUI ESTOY! aprendiendo '+ tecnologia)
+// })('JavaScript');
+
+//***METODOS O FUNCIONES DENTRO DE OBJETOS****/
+//metodos//
+// const musica = {
+//     reproducir: function(cancion){
+//         console.log('Reproduciendo la cancion: '+ cancion );
+//     },
+//     pausar: function(){
+//         console.log('Pausando...');
+//     }
+// }
+// //Los metodos pueden ir por fuera
+// musica.borrar = function(id) {
+//     console.log('Borrando la cancion con el ID: '+ id)
+// }
+// musica.reproducir('Hotel california');
+// musica.pausar();
+//musica.borrar(121);
+
+/***FUNCIONES QUE RETORNAN VALORES Y ARROW FUNCTIONS***/
+// const suma = function (a = 0, b = 0) {
+//    return a + b;
+// }
+// const multiplicar = function(a){
+//     return a * 5;
+// }
+//USANDO LAS ARROW FUNCTION:
+//  const suma =  (a = 0, b = 0) =>  a + b;
+ 
+//  const multiplicar =  a => a * 5;
+ 
+// let resultadoSuma = suma(10, 20),
+// total = multiplicar(resultadoSuma);
+
+// console.log(total);
+
+// let viajando = destino => 'viajando a la ciudad de ' + destino;
+// let viaje;
+// viaje = viajando('Londres');
+// console.log(viaje); 
+
+/****OBJECT CONSTRUCTOR Y PALABRA THIS****/
+//object constructor: declarando el objecto
+// function Tarea(nombre, urgencia){
+//         this.nombre = nombre;
+//         this.urgencia = urgencia;
+// }  
+// AHORA SE HACE:
+//object constructor: declarando el objecto
+// class Tarea {
+//     constructor(nombre,urgencia){
+//       this.nombre = nombre;
+//        this.urgencia = urgencia;
+//     }
+// }
+// //crear tareas
+// const tarea1 = new Tarea('Aprender JavaScript', 'Urgente');
+// const tarea2 = new Tarea('Pasear al perro', 'Media');
+// console.log(tarea1);
+// console.log(tarea2);
