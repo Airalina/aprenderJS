@@ -378,8 +378,91 @@
 
  //SWITCH
 
- const metodoPago = 'efectivo';
- switch(metodoPago){
-     case 'efectivo':
-             console.log('Pagaste con efectivo');
-            }
+//  const metodoPago = 'efectivo';
+//  switch(metodoPago){
+//      case 'efectivo':
+//              console.log(`Pagaste con ${metodoPago}`);
+//              break;
+//              case 'cheque':
+//              console.log(`Pagaste con ${metodoPago} revisaremos si tiene fondos`);
+//              break;
+//              case 'tarjeta':
+//              console.log(`Pagaste con ${metodoPago} espere un momento`);
+//              break;
+//             default: 
+//             console.log('metodo invalido '); 
+//             break;
+//             }
+
+//**LOOPS***/
+// for(let i = 0; i < 10; i++){
+//     console.log(`Numero: ${i} `);
+// }
+
+// const carrito = ['producto 1', 'producto 2', 'producto 3'];
+// console.log();
+
+// for(let i = 0; i < carrito.length; i++){
+//     console.log(`Producto en el carrito: ${carrito[i]} `);
+// }
+
+// let i= 0;
+// while(i< 10){
+//     console.log(`Numero: ${i} `);
+    
+// }
+// let i= 10;
+// do{
+
+//     console.log(i);
+//     i++;
+// }while(i< 10);
+
+//arreglo
+const pendiente = ['Tarea','Comer', 'Proyecto', 'Estudiar JS'];
+
+//arreglo con objeto
+
+const carrito = [
+    { id: 1, producto: 'libro'},
+    { id: 2, producto: 'camisa'},
+    { id: 3, producto: 'disco'}
+];
+//un objeto
+
+let automovil = {
+    modelo: 'Camaro',
+    motor: 6.0
+}
+// for (let i=0; i< pendiente.length; i++){
+//     console.log(pendiente[i]);
+// }
+//otra forma
+
+// for(pendientes of pendiente){
+//     console.log(pendientes);
+// }
+// for(producto of carrito ){
+//     console.log(producto.producto);
+// }
+// for(info of Object.values(automovil) ){
+//     console.log(info);
+// }
+// Object.values(automovil).forEach(info => {
+//     console.log(info);
+// } );
+// let nuevoArreglo= pendiente.forEach(function(pendientes){
+// console.log(pendientes);
+// });
+// // es igual a este pendiente.forEach(pendientes => {
+// // console.log(pendientes);
+// // });
+// //map crea una copia del arreglo
+// let nuevoArreglo2= pendiente.map(pendientes  => {
+//     console.log(pendientes);
+//     return pendientes;
+// }
+//     )   //es igual a 
+//     let nuevoArreglo2= pendiente.map(pendientes  => pendientes); 
+//     console.log(nuevoArreglo); 
+//     console.log(nuevoArreglo2);  
