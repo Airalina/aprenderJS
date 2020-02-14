@@ -166,14 +166,14 @@
 //     }
 // }
 //Utilizando this en object literal:  NOTA: New Date d afecha actual y con .getfullyear te da el año anda mas
-const persona = {
-    nombre: 'Juan',
-    edad: 80,
-    anioNacimiento: function(){
-        return new Date().getFullYear()- edad;
-    }
-}
-console.log(persona.anioNacimiento());
+// const persona = {
+//     nombre: 'Juan',
+//     edad: 80,
+//     anioNacimiento: function(){
+//         return new Date().getFullYear()- edad;
+//     }
+// }
+// console.log(persona.anioNacimiento());
 // //console.log(persona.edad); //para acceder a cada propiedad
 // //console.log(persona.musica[1]); Acceder a array
 // //console.log(persona.hogar.pais); Objeto dentro de un objeto
@@ -250,9 +250,9 @@ console.log(persona.anioNacimiento());
 // }
 //USANDO LAS ARROW FUNCTION:
 //  const suma =  (a = 0, b = 0) =>  a + b;
- 
+
 //  const multiplicar =  a => a * 5;
- 
+
 // let resultadoSuma = suma(10, 20),
 // total = multiplicar(resultadoSuma);
 
@@ -282,3 +282,104 @@ console.log(persona.anioNacimiento());
 // const tarea2 = new Tarea('Pasear al perro', 'Media');
 // console.log(tarea1);
 // console.log(tarea2);
+/*Fecha**/
+//const diaHoy = new Date();
+// let valor = diaHoy;
+// //retorna el numero del mes = 0 = Enero
+// // valor = diaHoy.getMonth();
+// //Retorna el numero de dia 0= Domingo
+// // valor= diaHoy.getDay();     
+// //retorna el numero del dia del mes
+// valor = diaHoy.getDate();         //sumarle 1 al mes o dia porque empieza desde 0
+// //retorna el año actual
+// valor = diaHoy.getFullYear();
+// //retorna los minutos de la hora
+// valor = diaHoy.getMinutes();
+// //retorla la hora del dia
+// valor = diaHoy.getHours();
+// //Timestamp
+// valor= diaHoy.getTime();
+// valor = diaHoy.getFullYear();
+// valor = diaHoy.setFullYear(1998);   //linea 304 a 306 es para obtener un año reescribirlo y publicarlo
+// valor = diaHoy.getFullYear();
+
+//ejemplo2 Newdate es igual a MES, DIA Y AÑO
+// const unDia = new Date('04-07-1999');
+// let valor;
+// valor= unDia.getDay();
+//console.log(valor);
+
+/***ESTRUCTURAS DE CONTROL***/
+
+// const logueado = true;
+// if(logueado){
+//     console.log('Si es estas logueado');
+// } else {
+//     console.log('Inicia Sesion');
+// }
+
+
+// let puntaje2;
+// if (puntaje2) {
+//     console.log('Si hay puntaje');
+// } else {
+//     console.log('No hay puntaje');
+// }
+// const puntaje = 1000;
+// if (puntaje === '1000') {
+//     console.log('Si es igual');
+// } else {
+//     console.log('No es igual');
+// }
+// //const edad = 18;
+// // if(edad >= 18){
+// //     console.log('Eres mayor de edad');
+// // } else {
+// //     console.log('No eres mayor de edad');
+// // }
+
+// let dinero = 500;
+// let carrito=300;
+// let  tarjeta = true;
+// // if(dinero>carrito){
+// //     console.log('Pago correcto');
+// // } else if(tarjeta){
+// //         console.log('Pagaste con tarjeta');
+// // } else {
+// //         console.log('Monto insuficiente');
+// // }
+// //Con or: 
+// if(dinero>carrito || tarjeta){
+//     console.log('Pago correcto');
+// } else {
+//         console.log('Monto insuficiente');
+// }
+// //Con Y:
+// if(dinero>carrito && tarjeta){
+//     console.log('Pago correcto');
+// } else {
+//         console.log('Monto insuficiente');
+// }
+
+// let hora = 8;
+//     if(hora > 0 && hora <= 12){
+//         console.log('Buenos dias');
+//     }else if(hora > 12 && hora <= 18){
+//         console.log('Buenos tardes');}
+//         else if(hora > 18 && hora <= 24){
+//             console.log('Buenos noches');}
+//             else{
+//                 console.log('Horario invalido '); 
+//            }
+
+/**TERNARIO**/
+// let logueado = true;
+// console.log( logueado ? 'Si si se logueo' : 'No se logueo');
+
+ //SWITCH
+
+ const metodoPago = 'efectivo';
+ switch(metodoPago){
+     case 'efectivo':
+             console.log('Pagaste con efectivo');
+            }
