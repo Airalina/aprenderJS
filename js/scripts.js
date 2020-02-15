@@ -466,3 +466,12 @@ let automovil = {
 //     let nuevoArreglo2= pendiente.map(pendientes  => pendientes); 
 //     console.log(nuevoArreglo); 
 //     console.log(nuevoArreglo2);  
+/**SCOOPE**/
+// let musica = 'Rock';
+// if(musica){
+//     let musica = 'Grunge';
+//     console.log('Dentro del if ' + musica );
+// }
+// console.log('Fuera del IF ' + musica);
+
+
