@@ -419,21 +419,21 @@
 // }while(i< 10);
 
 //arreglo
-const pendiente = ['Tarea','Comer', 'Proyecto', 'Estudiar JS'];
+// const pendiente = ['Tarea','Comer', 'Proyecto', 'Estudiar JS'];
 
-//arreglo con objeto
+// //arreglo con objeto
 
-const carrito = [
-    { id: 1, producto: 'libro'},
-    { id: 2, producto: 'camisa'},
-    { id: 3, producto: 'disco'}
-];
-//un objeto
+// const carrito = [
+//     { id: 1, producto: 'libro'},
+//     { id: 2, producto: 'camisa'},
+//     { id: 3, producto: 'disco'}
+// ];
+// //un objeto
 
-let automovil = {
-    modelo: 'Camaro',
-    motor: 6.0
-}
+// let automovil = {
+//     modelo: 'Camaro',
+//     motor: 6.0
+// }
 // for (let i=0; i< pendiente.length; i++){
 //     console.log(pendiente[i]);
 // }
@@ -473,5 +473,103 @@ let automovil = {
 //     console.log('Dentro del if ' + musica );
 // }
 // console.log('Fuera del IF ' + musica);
+/***Object Destructuring***/
+// const cliente = {
+//     nombre: 'Alejandra',
+//     tipo: 'Premium',
+//     datos : {
+//         ubicacion: {
+//             ciudad: 'Mexico',
+//             pais: 'Mexico'
+//         },
+//         cuenta: {
+//             desde: '10-12-2020',
+//             saldo: 4000
+//         }
+//     },
+//     gustos: {
+//         musica: ['trance', 'rock']
+//     }
+// }
+// // console.log(cliente);
 
+// // //crear la variable
+// // const nombreCliente = cliente.nombre;
 
+// //aplicando destructuring
+
+// // let {nombre, tipo} = cliente;
+// // let {datos: {ubicacion: {ciudad}}} = cliente;
+// // console.log(ciudad);
+// // console.log(tipo);
+// // let {datos: {cuenta: {saldo}}} = cliente;
+// // console.log(saldo);
+// let { gustos: musica} = cliente;
+// console.log(musica);
+/**Object Literal Enhacement**/
+// const banda = 'Metallica',
+// genero = 'Heavy metal',
+// canciones = ['cancion1', 'cancion2', 'cancion3'];
+
+// //version anterior
+// // const metallica = {
+// //     banda: banda,
+// //     genero: genero,
+// //     canciones: canciones
+// // }
+// //version nueva
+// const metallica = { banda, genero, canciones }
+// console.log(metallica);
+
+//****.FILTER .FIND Y .REDUCE****/
+// const personas = [
+//     {nombre: 'Juan', edad: 20},
+//     {nombre: 'Davida', edad: 50},
+//     {nombre: 'Alejandra', edad: 22, aprendiendo: 'JavaScript'},
+//     {nombre: 'Karen', edad: 28},
+//     {nombre: 'Miguek', edad: 30}
+// ];
+// //obtener las personas mayores de 25
+// // const mayores = personas.filter(persona =>  persona.edad > 25);
+
+// //  console.log(mayores);
+
+// //extraer inf de alejandra
+// // const alejandra = personas.find(persona =>  persona.nombre === 'Alejandra');
+// // console.log(alejandra);
+// // let {aprendiendo} = alejandra
+// // console.log(aprendiendo);
+
+// //reduce
+// let total = personas.reduce((edadTotal, persona) => {
+// return edadTotal+persona.edad;
+
+// },0);
+// console.log(total/personas.length);
+
+//***FETCH API***/
+descargarUsuarios(30);
+ 
+function descargarUsuarios(cantidad) {
+    const api = `https://api.randomuser.me/?nat=US&results=${cantidad}`;
+ 
+    //llamado a Fetch
+    fetch (api)
+    .then(respuesta => respuesta.json() )
+    .then(datos => imprimirHTML( datos.results ) );
+}
+
+function imprimirHTML(datos) {
+    datos.forEach(usuario => {
+        console.log(usuario);
+        const li = document.createElement('li');
+        const { name: {first}, name: {last}, picture: {medium}, nat } = usuario;
+        li.innerHTML = `
+            Nombre: ${first} ${last}
+            Pais: ${nat}
+            imagen:   <img src="${medium}">
+        `;
+         document.querySelector('#app').appendChild(li);
+
+    });
+}
